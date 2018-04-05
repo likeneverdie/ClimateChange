@@ -1,0 +1,71 @@
+#container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -290px;
+	margin-left: -500px;
+	height: 580px;
+	width: 1000px;
+	background-image: url('background.png');
+	background-size: 1000px 580px;
+}
+
+#account_input{
+	position: absolute;
+	font-size: 24px;
+	font-family: Microsoft JhengHei;
+	top: 200px;
+	left: 200px;
+}
+
+#password_input{
+	position: absolute;
+	font-size: 24px;
+	font-family: Microsoft JhengHei;
+	top: 275px;
+	left: 200px;
+}
+
+#submit_button{
+	background-color: #FCF0C2;
+	position: absolute;
+	font-size: 20px;
+	padding: 12px 120px;
+	font-family: Microsoft JhengHei;
+	top: 400px;
+	left: 365px;
+}
+
+#register_button{
+	background-color: #C7D9F0;
+	position: absolute;
+	font-size: 20px;
+	padding: 12px 100px;
+	font-family: Microsoft JhengHei;
+	top: 475px;
+	left: 365px;
+}
+
+#forget{
+	color: blue;
+	position: absolute;
+	font-size: 24px;
+	font-family: Microsoft JhengHei;
+	top: 275px;
+	left: 650px;
+}
+
+h1{
+	color: red;
+	position: absolute;
+	font-size: 24px;
+	font-family: Microsoft JhengHei;
+	top: 320px;
+	left: 385px;
+}
+
+h2{
+	color: purple;
+}
+
+
