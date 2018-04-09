@@ -51,14 +51,14 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link href = "app.css" rel = "stylesheet">
+	<link href = "app_login.css" rel = "stylesheet">
 	<title> Login </title>
 </head>
 <body>
 	<div id ="container">
 	<form action="login.php" method="post">
-		<input type="text"  name="account" id = "account_input" placeholder = "請輸入帳號" >
-		<input type="password" name="password" id = "password_input" placeholder = "請輸入密碼" >
+		<input type="text"  name="account" id = "account_input" placeholder = "" >
+		<input type="password" name="password" id = "password_input" placeholder = "" >
 		<input type="submit" name="submit" id = "submit_button" value="登入">
 	</form>
 	<h1> <?php if($i == mysql_num_rows($data)+1){
@@ -67,6 +67,8 @@
 	<form action="register.php" method="post">
 		<input type="submit" name="submit" id = "register_button" value="註冊會員">
 	</form>
+	<p id = "account_text"> 帳號 </p>
+	<p id = "password_text"> 密碼 </p>
 	<a href ="https://www.youtube.com/?gl=TW&hl=zh-tw" id = "forget"> 忘記密碼?</a>
 	</div>
 </body>

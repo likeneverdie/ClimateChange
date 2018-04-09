@@ -11,6 +11,7 @@
 }
 
 #account_input{
+	border-radius:7.5px;
 	position: absolute;
 	font-size: 24px;
 	font-family: Microsoft JhengHei;
@@ -19,6 +20,7 @@
 }
 
 #password_input{
+	border-radius:7.5px;
 	position: absolute;
 	font-size: 24px;
 	font-family: Microsoft JhengHei;
@@ -30,24 +32,27 @@
 	background-color: #FCF0C2;
 	position: absolute;
 	font-size: 20px;
-	padding: 12px 120px;
+	padding: 10px 120px;
 	font-family: Microsoft JhengHei;
 	top: 400px;
 	left: 365px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #register_button{
 	background-color: #C7D9F0;
 	position: absolute;
 	font-size: 20px;
-	padding: 12px 100px;
+	padding: 10px 100px;
 	font-family: Microsoft JhengHei;
+	font-size: 20px;
 	top: 475px;
 	left: 365px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #forget{
-	color: blue;
+	color: #588FD3;
 	position: absolute;
 	font-size: 24px;
 	font-family: Microsoft JhengHei;
@@ -64,8 +69,21 @@ h1{
 	left: 385px;
 }
 
-h2{
-	color: purple;
+
+#account_text{
+	position: absolute;
+	color: #737373;
+	font-family: Microsoft JhengHei;
+	font-size: 32px;
+	left: 120px;
+	top: 165px;
 }
 
-
+#password_text{
+	position: absolute;
+	color: #737373;
+	font-family: Microsoft JhengHei;
+	font-size: 32px;
+	left:120px;
+	top: 240px;
+}
