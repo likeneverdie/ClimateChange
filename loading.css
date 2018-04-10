@@ -1,0 +1,120 @@
+#container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -290px;
+	margin-left: -500px;
+	height: 580px;
+	width: 1000px;
+	background-color: #2ca5af;
+	background-size: 1000px 580px;
+}
+
+#hand{
+    animation-name: hand;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    position: absolute;
+    top: 130px;
+    left: -20px;
+}
+
+@keyframes hand {
+    from {left: -1075px;}
+    to {left: -20px;}
+}
+
+#paper{
+    animation-name: paper;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    position: absolute;
+    top: 25px;
+    left: 75px;
+}
+
+@keyframes paper {
+    from {left: -1000px;}
+    to {left: 75px;}
+}
+
+#earth{
+    animation-name: earth;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    position: absolute;
+    top: 55px;
+    right: 290px;
+}
+
+@keyframes earth {
+    
+    from {top: -750px;}
+    to {top: 55px;}
+    
+   
+}
+
+#notice_title{
+    animation-name: notice_title;
+    animation-duration: 3s;
+    animation-delay: 0.75s;
+    animation-fill-mode: both;
+    position: absolute;
+    font-size: 21px;
+    top: 330px;
+    right: 320px;
+    transform: rotate(-6deg);
+}
+
+@keyframes notice_title {
+    0%   {opacity: 0;}
+    30% {opacity: 0.3;}
+    80% {opacity: 0.8;}
+    90% {opacity: 0.9;}
+    100% {opacity: 1.0;}
+}
+
+#notice1{
+    animation-name: notice1;
+    animation-duration: 3s;
+    animation-delay: 0.75s;
+    animation-fill-mode: both;
+    position: absolute;
+    font-size: 30px;
+    top: 390px;
+    right: 250px;
+    transform: rotate(-6deg);
+}
+
+@keyframes notice1 {
+    0%   {opacity: 0;}
+    30% {opacity: 0.3;}
+    80% {opacity: 0.8;}
+    90% {opacity: 0.9;}
+    100% {opacity: 1.0;}
+}
+
+#notice2{
+    animation-name: notice2;
+    animation-duration: 3s;
+    animation-delay: 0.75s;
+    animation-fill-mode: both;
+    position: absolute;
+    font-size: 30px;
+    top: 430px;
+    right: 100px;
+    transform: rotate(-6deg);
+}
+
+@keyframes notice2 {
+    0%   {opacity: 0;}
+    30% {opacity: 0.3;}
+    80% {opacity: 0.8;}
+    90% {opacity: 0.9;}
+    100% {opacity: 1.0;}
+}
