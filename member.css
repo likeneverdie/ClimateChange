@@ -1,0 +1,293 @@
+#container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -290px;
+	margin-left: -500px;
+	height: 580px;
+	width: 1000px;
+    background-size: 1000px 580px;
+    background-image: url('member_bg.png');
+}
+
+#Hello{
+	position: absolute;
+	color: white;
+	font-size: 46px;
+	top: 180px;
+	left: 270px;
+}
+
+#account{
+	animation-name: account_show;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+	position: absolute;
+	color: white;
+	font-size: 40px;
+	top: 242.5px;
+	left: 270px;
+}
+
+#steps{
+	animation-name: text_show;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	top: 320px;
+	left: 270px;
+}
+
+#km{
+	animation-name: text_show;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	top: 350px;
+	left: 270px;
+}
+
+#ccoin{
+	animation-name: text_show;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	top: 380px;
+	left: 270px;
+}
+
+@keyframes account_show {
+    0%   {font-size: 0px;}
+    5% {font-size: 2px;}
+    10% {font-size: 4px;}
+    15% {font-size: 6px;}
+    20% {font-size: 8px;}
+    25% {font-size: 10px;}
+    30% {font-size: 12px;}
+    35% {font-size: 14px;}
+    40% {font-size: 16px;}
+    45% {font-size: 18px;}
+    50% {font-size: 20px;}
+    55% {font-size: 22px;}
+    60% {font-size: 24px;}
+    65% {font-size: 26px;}
+    70% {font-size: 28px;}
+    75% {font-size: 30px;}
+    80% {font-size: 32px;}
+    85% {font-size: 34px;}
+    90% {font-size: 36px;}
+    95% {font-size: 38px;}
+    100% {font-size: 40px;}
+}
+
+@keyframes text_show {
+    0%   {font-size: 0px;}
+    5% {font-size: 1px;}
+    10% {font-size: 2px;}
+    15% {font-size: 3px;}
+    20% {font-size: 4px;}
+    25% {font-size: 5px;}
+    30% {font-size: 6px;}
+    35% {font-size: 7px;}
+    40% {font-size: 8px;}
+    45% {font-size: 9px;}
+    50% {font-size: 10px;}
+    55% {font-size: 11px;}
+    60% {font-size: 12px;}
+    65% {font-size: 13px;}
+    70% {font-size: 14px;}
+    75% {font-size: 15px;}
+    80% {font-size: 16px;}
+    85% {font-size: 17px;}
+    90% {font-size: 18px;}
+    95% {font-size: 19px;}
+    100% {font-size: 20px;}
+    
+   
+}
+
+#change_button{
+	background-color: #FCF0C2;
+	position: absolute;
+	font-size: 22px;
+	padding: 10px 50px;
+	font-family: Microsoft JhengHei;
+	top: 525px;
+	left: 525px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#rank_button{
+	background-color: #C7D9F0;
+	position: absolute;
+	font-size: 22px;
+	padding: 10px 50px;
+	font-family: Microsoft JhengHei;
+	top: 525px;
+	left: 725px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/*  第一個按鈕  */
+#btn1{
+	position: absolute;
+	top: 37.5px;
+	right: 80px;
+	height: 70px;
+	width: 400px;
+	background-size: 1000px 580px;
+	font-size: 36px;
+	color: white;
+	background-color: #2ca5af;
+    background-repeat:no-repeat;
+    border: 5px solid #404040;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#btn1:hover{
+	background-color: #F0A02B;
+}
+
+#one{
+	z-index: 1;
+	position: absolute;
+	top: 28.5px;
+	left: 520px;
+}
+
+/* --------------------  */
+
+/*  第二個按鈕  */
+#btn2{
+	position: absolute;
+	top: 127.5px;
+	right: 80px;
+	height: 70px;
+	width: 400px;
+	background-size: 1000px 580px;
+	font-size: 36px;
+	color: white;
+	background-color:#2ca5af;
+    background-repeat:no-repeat;
+    border: 5px solid #404040;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#btn2:hover{
+	background-color: #F0A02B;
+}
+
+#two{
+	z-index: 1;
+	position: absolute;
+	top: 120px;
+	left: 520px;
+}
+
+/* --------------------  */
+
+/*  第三個按鈕  */
+#btn3{
+	position: absolute;
+	top: 217.5px;
+	right: 80px;
+	height: 70px;
+	width: 400px;
+	background-size: 1000px 580px;
+	font-size: 36px;
+	color: white;
+	background-color:#2ca5af;
+    background-repeat:no-repeat;
+    border: 5px solid #404040;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#btn3:hover{
+	background-color: #F0A02B;
+}
+
+#three{
+	z-index: 1;
+	position: absolute;
+	top: 210px;
+	left: 520px;
+}
+
+/* --------------------  */
+
+/*  第四個按鈕  */
+#btn4{
+	position: absolute;
+	top: 307.5px;
+	right: 80px;
+	height: 70px;
+	width: 400px;
+	background-size: 1000px 580px;
+	font-size: 36px;
+	color: white;
+	background-color:#2ca5af;
+    background-repeat:no-repeat;
+    border: 5px solid #404040;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#btn4:hover{
+	background-color: #F0A02B;
+}
+
+#four{
+	z-index: 1;
+	position: absolute;
+	top: 300px;
+	left: 520px;
+}
+
+/* --------------------  */
+
+/*  第五個按鈕  */
+#btn5{
+	position: absolute;
+	top: 397.5px;
+	right: 80px;
+	height: 70px;
+	width: 400px;
+	background-size: 1000px 580px;
+	font-size: 36px;
+	color: white;
+	background-color:#2ca5af;
+    background-repeat:no-repeat;
+    border: 5px solid #404040;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#btn5:hover{
+	background-color: #F0A02B;
+}
+
+#five{
+	z-index: 1;
+	position: absolute;
+	top: 390px;
+	left: 520px;
+}
+
+/* --------------------  */

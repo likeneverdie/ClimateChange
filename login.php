@@ -1,7 +1,7 @@
 <?php
-	$server = "localhost";
+	$server = "140.116.100.80";
 	$user = "root";
-	$password_db = "b960203960203";
+	$password_db = "ron";
 	
 	//連線資料庫
 	$Connect = mysql_connect($server, $user, $password_db);
@@ -13,8 +13,8 @@
 	}
 
 	mysql_query("SET NAMES UTF8");
-	mysql_select_db("Account"); //選擇資料庫
-	$data = mysql_query("SELECT * FROM account"); //選擇某一表格
+	mysql_select_db("myDB"); //選擇資料庫
+	$data = mysql_query("SELECT * FROM member"); //選擇某一表格
 
 	// 從表單中獲得使用者輸入得帳密資料
 	$account = $_POST['account'];
@@ -29,15 +29,21 @@
 			$row = mysql_fetch_array($data);
 			/*echo "ID: ". $row["id"]."<br>";
 			echo "Account: $row[1]<br>";
-			echo "Password: $row[2]<br>";*/
+			echo "Password: $row[2]<br>";
+			echo "steps: ". $row["steps"]."<br>";
+			echo "km: ". $row["km"]."<br>";
+			echo "Ccoin: ". $row["ccoin"]."<br>";*/
 			if($account == $row["account"] && $password == $row["password"]){
 				session_start();
 				$_SESSION["account"] = $account;
 				$_SESSION["password"] = $password;
 				$_SESSION["id"] = $row["id"];
+				$_SESSION["steps"] = $row["steps"];
+				$_SESSION["km"] = $row["km"];
+				$_SESSION["ccoin"] = $row["ccoin"];
 				//echo "帳密正確^^".$_SESSION["account"].$_SESSION["password"].$_SESSION["id"];
 				//header('Location: https://www.youtube.com/?gl=TW&hl=zh-tw');
-				header('Location: member.php');
+				header('Location: loading.html');
 				break;
 			}
 			else if($i == mysql_num_rows($data)){
