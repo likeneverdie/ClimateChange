@@ -24,7 +24,7 @@
 	//echo "password: $password<br>";
 
 	// 讀取資料
-	if(empty($account == FALSE) && empty($password == FALSE)){
+	if(empty($account) == FALSE && empty($password) == FALSE){
 		for($i = 1; $i<= mysql_num_rows($data); $i++){
 			$row = mysql_fetch_array($data);
 			/*echo "ID: ". $row["id"]."<br>";
@@ -34,7 +34,7 @@
 			echo "km: ". $row["km"]."<br>";
 			echo "Ccoin: ". $row["ccoin"]."<br>";*/
 			if($account == $row["account"] && $password == $row["password"]){
-				session_start();
+				session_start(); //啟動session
 				$_SESSION["account"] = $account;
 				$_SESSION["password"] = $password;
 				$_SESSION["id"] = $row["id"];
