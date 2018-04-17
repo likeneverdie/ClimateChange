@@ -34,7 +34,7 @@
 			echo "km: ". $row["km"]."<br>";
 			echo "Ccoin: ". $row["ccoin"]."<br>";*/
 			if($account == $row["account"] && $password == $row["password"]){
-				session_start(); //啟動session
+				session_start();
 				$_SESSION["account"] = $account;
 				$_SESSION["password"] = $password;
 				$_SESSION["id"] = $row["id"];
