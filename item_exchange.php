@@ -5,6 +5,7 @@ echo $_SESSION["ccoin"]."<br>";
 $ccoin = $_SESSION["ccoin"];
 echo $ccoin."<br>";
 
+$account = $_SESSION["account"];
 $cart = $_SESSION["cart"];
 
 $Conn = mysql_connect("localhost", "root", "b960203960203");
@@ -45,8 +46,8 @@ else{
 //echo $stock."<br>";
 
 
-$renew_userCcoin = mysql_query("UPDATE member_test SET ccoin = '$ccoin' WHERE member_test.account = 'wtchen'");
-$renew_userCart = mysql_query("UPDATE member_test SET cart = '$cart' WHERE member_test.account = 'wtchen'");
+$renew_userCcoin = mysql_query("UPDATE member_test SET ccoin = '$ccoin' WHERE member_test.account = '$account'");
+$renew_userCart = mysql_query("UPDATE member_test SET cart = '$cart' WHERE member_test.account = '$account'");
 $renew_itemStock = mysql_query("UPDATE item_test SET stock = '$stock' WHERE item_test.item = 'city_cafe'");
 
 
@@ -67,17 +68,17 @@ $id++;
 $date = date("Y/m/d");
 $time = date("h:i:sa");
 $timestamp = $date." ".$time;
-$user_account = "wtchen";
+//$user_account = "wtchen";
 $item = "city_cafe";
 
-$trans_data = $id." ".$prev_hash." ".$timestamp." ".$user_account." ".$price." ".$item;
-//echo $trans_data;
+$trans_data = $id." ".$prev_hash." ".$timestamp." ".$account." ".$price." ".$item;
+echo $trans_data."<br>";
 $trans_data_SHA256 = hash('sha256', $trans_data); // sha256加密
 echo $trans_data_SHA256;
 
 
-$trans_data_insert = mysql_query("INSERT INTO Account.trans_member_test (id, prev_hash, timestamp, account, cost, item, hash) VALUES (NULL, '$prev_hash', '$timestamp', '$user_account', '$price', '$item', '$trans_data_SHA256');");
+$trans_data_insert = mysql_query("INSERT INTO Account.trans_member_test (id, prev_hash, timestamp, account, cost, item, hash) VALUES (NULL, '$prev_hash', '$timestamp', '$account', '$price', '$item', '$trans_data_SHA256');");
 
-//header('Location: test.php');
+header('Location: item.php');
 
 ?>

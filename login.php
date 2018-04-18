@@ -1,7 +1,7 @@
 <?php
-	$server = "140.116.100.80";
+	$server = "localhost";
 	$user = "root";
-	$password_db = "ron";
+	$password_db = "b960203960203";
 	
 	//連線資料庫
 	$Connect = mysql_connect($server, $user, $password_db);
@@ -13,8 +13,8 @@
 	}
 
 	mysql_query("SET NAMES UTF8");
-	mysql_select_db("myDB"); //選擇資料庫
-	$data = mysql_query("SELECT * FROM member"); //選擇某一表格
+	mysql_select_db("Account"); //選擇資料庫
+	$data = mysql_query("SELECT * FROM member_test"); //選擇某一表格
 
 	// 從表單中獲得使用者輸入得帳密資料
 	$account = $_POST['account'];

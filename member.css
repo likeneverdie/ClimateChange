@@ -117,7 +117,8 @@
 }
 
 #change_button{
-	background-color: #FCF0C2;
+	color: white;
+	background-color: #404040;
 	position: absolute;
 	font-size: 22px;
 	padding: 10px 50px;
@@ -128,7 +129,8 @@
 }
 
 #rank_button{
-	background-color: #C7D9F0;
+	color: white;
+	background-color: #404040;
 	position: absolute;
 	font-size: 22px;
 	padding: 10px 50px;

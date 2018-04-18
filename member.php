@@ -3,9 +3,9 @@
 	if(isset($_SESSION["account"]) == FALSE){
 		header('Location: login.php');
 	}
-	$server = "140.116.100.80";
+	$server = "localhost";
 	$user = "root";
-	$password_db = "ron";
+	$password_db = "b960203960203";
 	
 	//連線資料庫
 	$Connect = mysql_connect($server, $user, $password_db);
@@ -17,8 +17,8 @@
 	}
 
 	mysql_query("SET NAMES UTF8");
-	mysql_select_db("myDB"); //選擇資料庫
-	$data = mysql_query("SELECT * FROM member"); //選擇某一表格
+	mysql_select_db("Account"); //選擇資料庫
+	$data = mysql_query("SELECT * FROM member_test"); //選擇某一表格
 		for($i = 1; $i<= mysql_num_rows($data); $i++){
 			$row = mysql_fetch_array($data);
 			/*echo "ID: ". $row["id"]."<br>";
@@ -81,7 +81,7 @@
                 <button id = "btn5" type="submit"> 低碳商品 </button>
             </a>
             <form action="register.php" method="post">
-                <input type="button" id = "change_button" value="商品兌換" onclick="window.location.href='http://140.116.54.153/login.php'" />
+                <input type="button" id = "change_button" value="商品兌換" onclick="window.location.href='http://140.116.54.153/item.php'" />
             </form>
             <form action="register.php" method="post">
                 <input type="button" id = "rank_button" value="廠商排名" onclick="window.location.href='http://www.hyperlinkcode.com/button-links.php'" />

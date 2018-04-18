@@ -57,10 +57,10 @@ $cost = 1000;
 $items = "city_cafe";
 
 $trans_data = $timestamp." ".$user_account." ".$user_password." ".$cost." ".$items;
-echo $trans_data."<br>";
+//echo $trans_data."<br>";
 
 $trans_data_SHA256 = hash('sha256', $trans_data); // sha256加密
-echo $trans_data_SHA256."<br>";
+//echo $trans_data_SHA256."<br>";
 
 ?>
 
