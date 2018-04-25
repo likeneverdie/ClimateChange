@@ -14,8 +14,8 @@
 
 	mysql_query("SET NAMES UTF8");
 	mysql_select_db("Account"); //選擇資料庫
-	$data = mysql_query("SELECT * FROM member_test"); //選擇某一表格
-
+	$data_member = mysql_query("SELECT * FROM member_test"); //選擇某一表格
+	$data_vendor = mysql_query("SELECT * FROM vendor_test");
 	// 從表單中獲得使用者輸入得帳密資料
 	$account = $_POST['account'];
 	$password = $_POST['password'];
@@ -25,8 +25,8 @@
 
 	// 讀取資料
 	if(empty($account) == FALSE && empty($password) == FALSE){
-		for($i = 1; $i<= mysql_num_rows($data); $i++){
-			$row = mysql_fetch_array($data);
+		for($i = 1; $i<= mysql_num_rows($data_member); $i++){
+			$row = mysql_fetch_array($data_member);
 			/*echo "ID: ". $row["id"]."<br>";
 			echo "Account: $row[1]<br>";
 			echo "Password: $row[2]<br>";
@@ -42,15 +42,34 @@
 				$_SESSION["km"] = $row["km"];
 				$_SESSION["ccoin"] = $row["ccoin"];
 				//echo "帳密正確^^".$_SESSION["account"].$_SESSION["password"].$_SESSION["id"];
-				//header('Location: https://www.youtube.com/?gl=TW&hl=zh-tw');
 				header('Location: loading.html');
 				break;
 			}
-			else if($i == mysql_num_rows($data)){
+			/*else if($i == mysql_num_rows($data)){
 				//echo "帳密錯誤，請重新輸入";
+			}*/
+		}
+		for($i = 1; $i<= mysql_num_rows($data_vendor); $i++){
+			$row = mysql_fetch_array($data_vendor);
+			/*echo "ID: ". $row["id"]."<br>";
+			echo "Account: $row[1]<br>";
+			echo "Password: $row[2]<br>";
+			echo "steps: ". $row["steps"]."<br>";
+			echo "km: ". $row["km"]."<br>";
+			echo "Ccoin: ". $row["ccoin"]."<br>";*/
+			if($account == $row["account"] && $password == $row["password"]){
+				session_start();
+				$_SESSION["account"] = $account;
+				$_SESSION["password"] = $password;
+				$_SESSION["id"] = $row["id"];
+				$_SESSION["ccoin"] = $row["ccoin"];
+				$_SESSION["co2"] = $row["co2"];
+				//echo "帳密正確^^".$_SESSION["account"].$_SESSION["password"].$_SESSION["id"];
+				header('Location: loading_vendor.html');
+				break;
 			}
 		}
-	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +86,7 @@
 		<input type="password" name="password" id = "password_input" placeholder = "" >
 		<input type="submit" name="submit" id = "submit_button" value="登入">
 	</form>
-	<h1> <?php if($i == mysql_num_rows($data)+1){
+	<h1> <?php if($i == mysql_num_rows($data_vendor)+1){
 		echo "帳密錯誤，請重新輸入";
 	}?> </h1>
 	<form action="register.php" method="post">

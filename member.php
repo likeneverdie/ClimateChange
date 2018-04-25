@@ -55,11 +55,12 @@
     </head>
     <body>
         <div id = "container">
-            <p id = "Hello"> Hello!!! </p>
+            <b id = "Hello"> Hello!!! </b>
             <p id = "account"><u><?php echo ">>  ".$_SESSION["account"]?></u></p>
-            <p id = "steps"><?php echo "目前累積行步數:  ".$_SESSION["steps"]." steps"?></p>
-            <p id = "km"><?php echo "目前累積單車里程數: ".$_SESSION["km"]." km"?></p>
+            <p id = "steps"><?php echo "累積步數:  ".$_SESSION["steps"]." steps"?></p>
+            <p id = "km"><?php echo "累積里程數: ".$_SESSION["km"]." km"?></p>
             <p id = "ccoin"><?php echo "擁有C幣: ".$_SESSION["ccoin"]?></p>
+            <p id = "co2"><?php echo "累積減碳量: ".$_SESSION["ccoin"]." kg"?></p>
             <img id = "one" src = "1.png" height = "100px" width = "90px">
             <a href="https://likeneverdie.github.io/uidd2017_Loading/">
                 <button id = "btn1" type="submit"> 步行 </button>
@@ -69,15 +70,15 @@
                 <button id = "btn2" type="submit"> 自行車 </button>
             </a>
             <img id = "three" src = "3.png" height = "100px" width = "90px">
-            <a href="https://likeneverdie.github.io/uidd2017_Loading/">
+            <a href="https://www.einvoice.nat.gov.tw/index">
                 <button id = "btn3" type="submit"> 電子發票 </button>
             </a>
             <img id = "four" src = "4.png" height = "100px" width = "90px">
-            <a href="https://likeneverdie.github.io/uidd2017_Loading/">
+            <a href="https://www.metro.taipei/cp.aspx?n=91974F2B13D997F1">
                 <button id = "btn4" type="submit"> 大眾運輸 </button>
             </a>
             <img id = "five" src = "5.png" height = "100px" width = "90px">
-            <a href="https://likeneverdie.github.io/uidd2017_Loading/">
+            <a href="https://www.epa.gov.tw/public/Data/771110413071.pdf">
                 <button id = "btn5" type="submit"> 低碳商品 </button>
             </a>
             <form action="register.php" method="post">
@@ -86,6 +87,14 @@
             <form action="register.php" method="post">
                 <input type="button" id = "rank_button" value="廠商排名" onclick="window.location.href='http://www.hyperlinkcode.com/button-links.php'" />
             </form>
+            <form action="coin_convert.php" method="post">
+				<input type="submit" name="submit" id = "convert_button" value="兌換C幣" onclick = "btn_confirm()">
+			</form>
         </div>
+        <script>
+			function btn_confirm(){
+				alert("C幣兌換成功!!!");
+			}
+        </script>
     </body>
 </html>

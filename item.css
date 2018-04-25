@@ -6,32 +6,31 @@
 	margin-left: -500px;
 	height: 580px;
 	width: 1000px;
-	background-image: url('exchange.png');
+	background-image: url('exchange1.png');
 	background-size: 1000px 580px;
 }
 
 #convert_button{
+	border: none;
 	color: white;
 	background-color: #404040;
 	position: absolute;
-	font-size: 28px;
-	padding: 5px 40px;
+	font-size: 30px;
+	padding: 2.5px 15px;
 	font-family: Microsoft JhengHei;
-	top: 280px;
+	top: 300px;
 	left: 175px;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	/*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
 }
 
 #exchange_button_cafe{
-	color: white;
-	background-color: #404040;
 	position: absolute;
-	font-size: 15px;
-	padding: 5px 15px;
-	font-family: Microsoft JhengHei;
-	top: 170px;
-	left: 890px;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	top: 130px;
+	left: 895px;
+	width: 40px;
+	height: 40px;
+	z-index: 0;
+	/*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
 }
 
 #city_cafe{
@@ -40,10 +39,36 @@
 	left: 677.5px;
 }
 
+#city_cafe_price{
+	position: absolute;
+	color: #884023;
+	top: 170px;
+	left: 520px;
+	font-size: 28px;
+}
+
 #carrefour{
 	position: absolute;
 	top: 222px;
 	left: 677.5px;
+}
+
+#carrefour_price{
+	position: absolute;
+	color: #884023;
+	top: 310px;
+	left: 520px;
+	font-size: 28px;
+}
+
+#exchange_button_carrefour{
+	position: absolute;
+	top: 270px;
+	left: 895px;
+	width: 40px;
+	height: 40px;
+	z-index: 0;
+	/*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
 }
 
 #wastons{
@@ -53,28 +78,46 @@
 	z-index: 1;
 }
 
+#wastons_price{
+	position: absolute;
+	color: #884023;
+	top: 455px;
+	left: 520px;
+	font-size: 28px;
+}
+
+#exchange_button_wastons{
+	position: absolute;
+	top: 410px;
+	left: 895px;
+	width: 40px;
+	height: 40px;
+	z-index: 0;
+	/*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+}
+
 #city_cafe_text{
 	color: #404040;
 	position: absolute;
 	font-size: 28px;
-	top: 110px;
-	left: 472.5px;
+	top: 95px;
+	left: 480px;
 }
 
 #carrefour_text{
 	color: #404040;
 	position: absolute;
 	font-size: 28px;
-	top: 250px;
-	left: 472.5px;
+	top: 235px;
+	left: 480px;
 }
 
 #wastons_text{
 	color: #404040;
 	position: absolute;
 	font-size: 28px;
-	top: 390px;
-	left: 475px;
+	top: 375px;
+	left: 480px;
 }
 
 #account{
@@ -85,7 +128,7 @@
 	position: absolute;
 	color: white;
 	font-size: 30px;
-	top: 220px;
+	top: 240px;
 	left: 180px;
 }
 
@@ -114,15 +157,16 @@
 }
 
 #ccoin{
-	animation-name: text_show;
+	/*animation-name: text_show;
     animation-duration: 1s;
     animation-delay: 0.5s;
-    animation-fill-mode: both;
+    animation-fill-mode: both;*/
 	position: absolute;
 	color: white;
-	font-size: 20px;
-	top: 410px;
+	font-size: 25px;
+	top: 360px;
 	left: 180px;
+	font-family: Microsoft JhengHei;
 }
 
 @keyframes account_show {

@@ -27,6 +27,6 @@ $data = mysql_query("SELECT * FROM member_test"); //選擇某一表格
 //$renew_data = mysql_query("UPDATE `Account`.`member_test` SET `steps` = '$steps', `km` = '$km', `ccoin` = '$ccoin' WHERE `member_test`.`account` = 'wtchen'");
 $renew_data = mysql_query("UPDATE member_test SET steps = '$steps', km = '$km', ccoin = '$ccoin' WHERE member_test.account = '$account'");
 
-header('Location: item.php');
+header('Location: member.php');
 
 ?>

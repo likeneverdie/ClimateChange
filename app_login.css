@@ -29,6 +29,7 @@
 }
 
 #submit_button{
+	border: none;
 	background-color: #FCF0C2;
 	position: absolute;
 	font-size: 20px;
@@ -40,6 +41,7 @@
 }
 
 #register_button{
+	border: none;
 	background-color: #C7D9F0;
 	position: absolute;
 	font-size: 20px;
