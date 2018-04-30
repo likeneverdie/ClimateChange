@@ -59,11 +59,11 @@
 			echo "Ccoin: ". $row["ccoin"]."<br>";*/
 			if($account == $row["account"] && $password == $row["password"]){
 				session_start();
-				$_SESSION["account"] = $account;
-				$_SESSION["password"] = $password;
-				$_SESSION["id"] = $row["id"];
-				$_SESSION["ccoin"] = $row["ccoin"];
-				$_SESSION["co2"] = $row["co2"];
+				$_SESSION["account_vendor"] = $account;
+				$_SESSION["password_vendor"] = $password;
+				$_SESSION["id_vendor"] = $row["id"];
+				$_SESSION["ccoin_vendor"] = $row["ccoin"];
+				$_SESSION["co2_vendor"] = $row["co2"];
 				//echo "帳密正確^^".$_SESSION["account"].$_SESSION["password"].$_SESSION["id"];
 				header('Location: loading_vendor.html');
 				break;

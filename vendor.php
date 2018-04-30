@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(isset($_SESSION["account"]) == FALSE){
+	if(isset($_SESSION["account_vendor"]) == FALSE){
 		header('Location: login.php');
 	}
 	$server = "localhost";
@@ -21,22 +21,11 @@
 	$data = mysql_query("SELECT * FROM vendor_test"); //選擇某一表格
 	for($i = 1; $i<= mysql_num_rows($data); $i++){
 		$row = mysql_fetch_array($data);
-		/*echo "ID: ". $row["id"]."<br>";
-		echo "Account: $row[1]<br>";
-		echo "Password: $row[2]<br>";
-		echo "steps: ". $row["steps"]."<br>";
-		echo "km: ". $row["km"]."<br>";
-		echo "Ccoin: ". $row["ccoin"]."<br>";
-		/*echo $_SESSION["account"]."<br>";
-		echo $_SESSION["password"]."<br>";
-		echo $row["account"]."<br>";
-		echo $row["password"]."<br>";
-		echo $_SESSION["account"] == $row["account"];*/
-		if($_SESSION["account"] == $row["account"] && $_SESSION["password"] == $row["password"]){
+		if($_SESSION["account_vendor"] == $row["account"] && $_SESSION["password_vendor"] == $row["password"]){
 			//echo "PPAP";
 			//session_start();
-			$_SESSION["ccoin"] = $row["ccoin"];
-			$_SESSION["co2"] = $row["co2"];
+			$_SESSION["ccoin_vendor"] = $row["ccoin"];
+			$_SESSION["co2_vendor"] = $row["co2"];
 			/*$steps = $row["steps"];
 			$km = $row["km"];
 			$ccoin = $row["ccoin"];*/
@@ -57,16 +46,16 @@
 </head>
 <body>
     <div id = "container">
-		<h1 id = "account"> <?php echo $_SESSION["account"]?></h1>
-		<p id = "ccoin"> <?php echo "C幣: ".$_SESSION["ccoin"]?></p>
-		<p id = "co2"> <?php echo "碳存量: ".$_SESSION["co2"]."(kg)"?></p>
-        <a href = "https://www.youtube.com/?gl=TW&hl=zh-tw" id = "btn1">
-            <img src = "Vendorbtn1.png" height="150px" width="300px">
+		<h1 id = "account"> <?php echo $_SESSION["account_vendor"]?></h1>
+		<p id = "ccoin"> <?php echo "C幣: ".$_SESSION["ccoin_vendor"]?></p>
+		<p id = "co2"> <?php echo "碳存量: ".$_SESSION["co2_vendor"]."(kg)"?></p>
+        <a href = "http://140.116.54.153/vendor_transaction.php" id = "btn1">
+            <img src = "Vendorbtn11.png" height="150px" width="300px">
         </a>
-        <a href = "https://www.youtube.com/?gl=TW&hl=zh-tw" id = "btn2">
+        <a href = "http://140.116.54.153/vendor_sell.php" id = "btn2">
             <img src = "Vendorbtn2.png" height="155px" width="340px">
         </a>
-        <a href = "https://www.youtube.com/?gl=TW&hl=zh-tw" id = "btn3">
+        <a href = "http://140.116.54.153/vendor_transRecord.php" id = "btn3">
             <img src = "Vendorbtn3.png" height="155px" width="340px">
         </a>
     </div>

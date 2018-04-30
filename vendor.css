@@ -6,8 +6,9 @@
     margin-left: -500px;
     height: 580px;
     width: 1000px;
-    background-image: url('VendorBG.png');
+    background-image: url('VendorBG1.png');
     background-size: 1000px 580px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #btn1{
@@ -52,10 +53,10 @@
     animation-delay: 0.5s;
     animation-fill-mode: both;
 	position: absolute;
-	color: white;
-	font-size: 46px;
-	top: 230px;
-	left: 100px;
+	color: black;
+	font-size: 44px;
+	top: 260px;
+	left: 130px;
 }
 
 @keyframes account_show {
@@ -79,7 +80,7 @@
     85% {font-size: 38px;}
     90% {font-size: 40px;}
     95% {font-size: 42px;}
-    100% {font-size: 46px;}
+    100% {font-size: 44px;}
 }
 
 #ccoin{
@@ -90,8 +91,8 @@
 	position: absolute;
 	color: #404040;
 	font-size: 32px;
-	top: 300px;
-	left: 100px;
+	top: 315px;
+	left: 130px;
 	font-family: Microsoft JhengHei;
 }
 
@@ -103,8 +104,8 @@
 	position: absolute;
 	color: #404040;
 	font-size: 32px;
-	top: 350px;
-	left: 100px;
+	top: 355px;
+	left: 130px;
 	font-family: Microsoft JhengHei;
 }
 
