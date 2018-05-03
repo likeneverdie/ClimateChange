@@ -48,7 +48,7 @@
     <div id = "container">
 		<h1 id = "account"> <?php echo $_SESSION["account_vendor"]?></h1>
 		<p id = "ccoin"> <?php echo "C幣: ".$_SESSION["ccoin_vendor"]?></p>
-		<p id = "co2"> <?php echo "碳存量: ".$_SESSION["co2_vendor"]."(kg)"?></p>
+		<p id = "co2"> <?php echo "碳存量: ".$_SESSION["co2_vendor"]."kg"?></p>
         <a href = "http://140.116.54.153/vendor_transaction.php" id = "btn1">
             <img src = "Vendorbtn11.png" height="150px" width="300px">
         </a>

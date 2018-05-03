@@ -61,7 +61,20 @@
 	left: 725px;
 }
 
+/* Table Property */
+
+
+#Buybtn{
+	position: relative;
+	top: 15px;
+	left: -40px;
+	height: 80px;
+	width: 120px;
+}
+
+
 #table{
+	opacity: 0.9;
 	position: absolute;
 	overflow: auto;
 	height: 380px;
@@ -69,16 +82,6 @@
 	top: 160px;
 	left: 50px;
 }
-
-#Buybtn{
-	position: relative;
-	top: 20px;
-	left: -40px;
-	height: 80px;
-	width: 120px;
-}
-
-/* Table Property */
 
 #trans_list{
 	border-collapse: collapse;
@@ -91,18 +94,26 @@
 	padding: 8px;
 } 
 
-#trans_list tr:nth-child(even){background-color: #f2f2f2;}
+/*#trans_list tr:nth-child(even){background-color: #f2f2f2;}*/
 
-#trans_list tr:hover{background-color: #ddd;}
+
+#trans_list tr:hover{background-color: #ffd699;}
 
 #trans_list th{
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: middle;
-	background-color: #ddd;
+	background-color: #f6f6f6;
 	color: #404040;
 }
 
 #trans_list tr{
+
+	background-color: white;
 	text-align: right;
 }
+
+#trans_list td{
+	padding: 0px;
+}
+

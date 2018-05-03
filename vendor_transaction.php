@@ -1,5 +1,6 @@
 <?php
 	session_start();
+
 	$account = $_SESSION["account_vendor"];
 	/*$ccoin  = $_SESSION["ccoin_vendor"];
 	$co2 = $_SESSION["co2_vendor"];*/
@@ -45,6 +46,7 @@
 	
 	if(empty($_POST['price']) == FALSE && empty($_POST['kg']) == FALSE){
 		
+		$seller = $_POST['seller'];
 		$price = $_POST['price'];
 		$kg = $_POST['kg'];
 		
@@ -57,6 +59,31 @@
 			// renew vendor data
 			$renew_vendorCcoin = mysql_query("UPDATE vendor_test SET ccoin = '$ccoin' WHERE vendor_test.account = '$account'");
 			$renew_vendorCo2 = mysql_query("UPDATE vendor_test SET co2 = '$co2' WHERE vendor_test.account = '$account'");
+			
+			// Record this transaction
+			$data_trans = mysql_query("SELECT * FROM trans_vendor_record"); //選擇某一表格
+
+			for($i = 1; $i<= mysql_num_rows($data_trans); $i++){
+
+				$row = mysql_fetch_array($data_trans);
+				
+				if($i == mysql_num_rows($data_trans)){
+					$prev_hash = $row['hash'];
+					$id = $row['id'];
+				}
+			}
+			$id++;			
+			$date = date("Y/m/d");
+			$time = date("h:i:sa");
+			$timestamp = $date." ".$time;
+			$vendor_buy = $account;
+			$vendor_sell = $seller;
+			$trans_data = $id." ".$prev_hash." ".$timestamp." ".$vendor_buy." ".$vendor_sell." ".$kg." ".$price;
+			//echo $trans_data."<br>";
+			$trans_data_SHA256 = hash('sha256', $trans_data); // sha256加密
+			//echo $trans_data_SHA256;
+			
+			$trans_data_insert = mysql_query("INSERT INTO Account.trans_vendor_record (id, prev_hash, timestamp, vendor_buy, vendor_sell, kg, price, hash) VALUES (NULL, '$prev_hash', '$timestamp', '$vendor_buy', '$vendor_sell', '$kg', '$price', '$trans_data_SHA256');");
 		}
 	}
 
@@ -77,13 +104,13 @@
 		<h1 id = "account"> <?php echo $account?></h1>
 		<h1 id = "title"> 碳交易 </h1>
 		<p id = "ccoin"> <?php echo "C幣: ".$ccoin?></p>
-		<p id = "co2"> <?php echo "碳存量: ".$co2."(kg)"?></p>
+		<p id = "co2"> <?php echo "碳存量: ".$co2."kg"?></p>
 		
 		<div id = "table">
 			<table id = "trans_list">
 				<tr>
 					<th>廠商</th>
-					<th>碳單價</th>
+					<th>價格</th>
 					<th>碳公斤數</th>
 					<th></th>					
 				</tr>
@@ -97,6 +124,7 @@
 					<td><?php echo $row['kg']?></td>
 					<td>
 						<form action = "vendor_transaction.php" method = "post" onsubmit = "return confirm ('確定要購買嗎？');">
+								<input type="hidden" name = "seller" value = "<?php echo $row['vendor']?>">
 								<input type="hidden" name = "price" value = "<?php echo $row['price']?>">
 								<input type="hidden" name = "kg" value = "<?php echo $row['kg']?>">
 								<input type="image" id = "Buybtn" name="submit" src = "Buy.png" onmouseover="hover(this)"; onmouseout="unhover(this)">

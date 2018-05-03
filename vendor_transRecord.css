@@ -60,3 +60,50 @@
 	top: 0px;
 	left: 725px;
 }
+
+/* Table Property */
+
+#table{
+	opacity: 0.85;
+	position: absolute;
+	overflow: auto;
+	height: 380px;
+    width: 900px;
+	top: 160px;
+	left: 50px;
+}
+
+#trans_list{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#trans_list td, #trans_list th{
+	font-size: 32px;
+	border: 1px solid #ddd;
+	padding: 8px;
+} 
+
+/*#trans_list tr:nth-child(even){background-color: #f2f2f2;}*/
+
+
+#trans_list tr:hover{background-color: #ffd699;}
+
+#trans_list th{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: middle;
+	background-color: #f6f6f6;
+	color: #404040;
+}
+
+#trans_list tr{
+
+	background-color: white;
+	text-align: right;
+}
+
+#trans_list td{
+	
+	padding: 20px;
+}
