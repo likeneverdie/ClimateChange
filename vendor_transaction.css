@@ -11,6 +11,15 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+#back{
+	position: absolute;
+	height: 90px;
+	width: 120px;
+	top: 20px;
+	left: 850px
+
+}
+
 #account{
 	animation-name: account_show;
     animation-duration: 1s;
@@ -18,8 +27,8 @@
     animation-fill-mode: both;
 	position: absolute;
 	color: white;
-	font-size: 50px;
-	top: -22.5px;
+	font-size: 42px;
+	top: -10px;
 	left: 162.5px;
 }
 
@@ -30,8 +39,8 @@
     animation-fill-mode: both;
 	position: absolute;
 	color: white;
-	font-size: 30px;
-	top: 40px;
+	font-size: 28px;
+	top: 45px;
 	left: 165px;
 	font-family: Microsoft JhengHei;
 }
@@ -43,8 +52,8 @@
     animation-fill-mode: both;
 	position: absolute;
 	color: white;
-	font-size: 30px;
-	top: 72.5px;
+	font-size: 28px;
+	top: 77.5px;
 	left: 165px;
 	font-family: Microsoft JhengHei;
 }
@@ -58,7 +67,7 @@
 	color: #404040;
 	font-size: 55px;
 	top: 0px;
-	left: 725px;
+	left: 425px;
 }
 
 /* Table Property */

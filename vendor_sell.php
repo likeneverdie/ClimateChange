@@ -44,6 +44,7 @@
 		<h1 id = "title"> 販售碳權 </h1>
 		<p id = "ccoin"> <?php echo "C幣: ".$_SESSION["ccoin_vendor"]?></p>
 		<p id = "co2"> <?php echo "碳存量: ".$_SESSION["co2_vendor"]."kg"?></p>
+		<a href = "http://140.116.54.153/vendor.php"><img id = "back" src = 'back.png'></a>
 		<div id = "sell"></div>
 		<p id = "price_text">販賣金額</p>
 		<p id = "amount_text">販賣數量</p>

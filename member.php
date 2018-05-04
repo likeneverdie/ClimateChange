@@ -21,29 +21,25 @@
 	$data = mysql_query("SELECT * FROM member_test"); //選擇某一表格
 		for($i = 1; $i<= mysql_num_rows($data); $i++){
 			$row = mysql_fetch_array($data);
-			/*echo "ID: ". $row["id"]."<br>";
-			echo "Account: $row[1]<br>";
-			echo "Password: $row[2]<br>";
-			echo "steps: ". $row["steps"]."<br>";
-			echo "km: ". $row["km"]."<br>";
-			echo "Ccoin: ". $row["ccoin"]."<br>";
-			/*echo $_SESSION["account"]."<br>";
-			echo $_SESSION["password"]."<br>";
-			echo $row["account"]."<br>";
-			echo $row["password"]."<br>";
-			echo $_SESSION["account"] == $row["account"];*/
+
 			if($_SESSION["account"] == $row["account"] && $_SESSION["password"] == $row["password"]){
 				//echo "PPAP";
 				//session_start();
 				$_SESSION["steps"] = $row["steps"];
 				$_SESSION["km"] = $row["km"];
 				$_SESSION["ccoin"] = $row["ccoin"];
+				$_SESSION["co2_saved"] = $row["co2_saved"];
 				/*$steps = $row["steps"];
 				$km = $row["km"];
 				$ccoin = $row["ccoin"];*/
 				break;
 			}
 		}
+	$account = $_SESSION["account"];
+	$co2_saved = $_SESSION["co2_saved"];
+	$co2_saved = $co2_saved + $_SESSION["steps"] * 0.0000465 + $_SESSION["km"] * 0.062;
+	//echo $co2_saved;
+	$renew_data = mysql_query("UPDATE `Account`.`member_test` SET `co2_saved` = '$co2_saved' WHERE `member_test`.`account` = '$account';");
 ?>
 
 <!DOCTYPE html>
@@ -60,13 +56,13 @@
             <p id = "steps"><?php echo "累積步數:  ".$_SESSION["steps"]." steps"?></p>
             <p id = "km"><?php echo "累積里程數: ".$_SESSION["km"]." km"?></p>
             <p id = "ccoin"><?php echo "擁有C幣: ".$_SESSION["ccoin"]?></p>
-            <p id = "co2"><?php echo "累積減碳量: ".$_SESSION["ccoin"]." kg"?></p>
+            <p id = "co2"><?php echo "累積減碳量: ".$co2_saved." kg"?></p>
             <img id = "one" src = "1.png" height = "100px" width = "90px">
             <a href="https://likeneverdie.github.io/uidd2017_Loading/">
                 <button id = "btn1" type="submit"> 步行 </button>
             </a>
             <img id = "two" src = "2.png" height = "100px" width = "90px">
-            <a href="https://likeneverdie.github.io/uidd2017_Loading/">
+            <a href="http://ckbike.ncku.edu.tw/">
                 <button id = "btn2" type="submit"> 自行車 </button>
             </a>
             <img id = "three" src = "3.png" height = "100px" width = "90px">

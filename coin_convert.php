@@ -6,7 +6,7 @@ echo $_SESSION["km"]."<br>";
 echo $_SESSION["ccoin"]."<br>";
 
 $account = $_SESSION["account"];
-$ccoin = $_SESSION["ccoin"] + ($_SESSION["steps"] * 2) + ($_SESSION["km"] * 1000);
+$ccoin = $_SESSION["ccoin"] + ($_SESSION["steps"] * 1) + ($_SESSION["km"] * 1000);
 $steps  = 0;
 $km = 0;
 echo $steps."<br>";

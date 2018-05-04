@@ -1,13 +1,9 @@
 <?php
-	session_start();
-	if(isset($_SESSION["account_vendor"]) == FALSE){
-		header('Location: login.php');
-	}
-	//連線資料庫 To get the certain data of transaction
 	$server = "localhost";
 	$user = "root";
 	$password_db = "b960203960203";
 	
+	//連線資料庫
 	$Connect = mysql_connect($server, $user, $password_db);
 	if(!$Connect){
 		die("連線失敗，錯誤訊息：".mysql_error());
@@ -19,7 +15,6 @@
 	mysql_query("SET NAMES UTF8");
 	mysql_select_db("Account"); //選擇資料庫
 	$data = mysql_query("SELECT * FROM trans_vendor_record"); //選擇某一表格
-	
 ?>
 
 
@@ -28,38 +23,39 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>交易紀錄</title>
+    <title>Transaction Record</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="vendor_transRecord.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="TransactionRecord.css" />
 </head>
 <body>
-    <div id = "container">
-		<h1 id = "account"> <?php echo $_SESSION["account_vendor"]?></h1>
-		<h1 id = "title"> 交易紀錄 </h1>
-		<p id = "ccoin"> <?php echo "C幣: ".$_SESSION["ccoin_vendor"]?></p>
-		<p id = "co2"> <?php echo "碳存量: ".$_SESSION["co2_vendor"]."kg"?></p>
-		<a href = "http://140.116.54.153/vendor.php"><img id = "back" src = 'back.png'></a>
+    <div id = "container">	
 		<div id = "table">
 			<table id = "trans_list">
 				<tr>
-					<th>販售廠商</th>
-					<th>價格</th>
-					<th>碳公斤數</th>
-					<th>時間</th>					
+					<th>ID</th>
+					<th>Previous Hash</th>
+					<th>Timestamp</th>
+					<th>Buyer</th>
+					<th>Seller</th>		
+					<th>Kg</th>
+					<th>Price</th>
+					<th>Hash Value</th>			
 				</tr>
 				<?php
 				for($i = 1; $i<= mysql_num_rows($data); $i++){
 					$row = mysql_fetch_array($data);
-					if($row['vendor_buy'] == $_SESSION["account_vendor"]){
 				?>
 				<tr>
-					<td><?php echo $row['vendor_sell']?></td>
-					<td><?php echo $row['price']?></td>
-					<td><?php echo $row['kg']?></td>
+					<td><?php echo $row['id']?></td>
+					<td><?php echo $row['prev_hash']?></td>
 					<td><?php echo $row['timestamp']?></td>
+					<td><?php echo $row['vendor_buy']?></td>
+					<td><?php echo $row['vendor_sell']?></td>
+					<td><?php echo $row['kg']?></td>
+					<td><?php echo $row['price']?></td>
+					<td><?php echo $row['hash']?></td>
 				</tr>
 				<?php
-					}
 				}
 				?>
 			</table>
