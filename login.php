@@ -81,6 +81,8 @@
 </head>
 <body>
 	<div id ="container">
+	<p id = "CCR">CCR登入</p>
+	<img src = "CCRlogo.png" id = "logo">
 	<form action="login.php" method="post">
 		<input type="text"  name="account" id = "account_input" placeholder = "" >
 		<input type="password" name="password" id = "password_input" placeholder = "" >

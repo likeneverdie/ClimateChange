@@ -40,21 +40,22 @@
     to {left: 75px;}
 }
 
-#earth{
+#CCRlogo{
     animation-name: earth;
     animation-duration: 2s;
     animation-delay: 1s;
     animation-timing-function: ease;
     animation-fill-mode: both;
     position: absolute;
-    top: 55px;
-    right: 290px;
+    top: 600px;
+    left: 250px;
+    transform: rotate(-6deg);
 }
 
 @keyframes earth {
     
     from {top: -750px;}
-    to {top: 55px;}
+    to {top: 15px;}
     
    
 }
@@ -65,9 +66,10 @@
     animation-delay: 0.75s;
     animation-fill-mode: both;
     position: absolute;
-    font-size: 21px;
-    top: 330px;
-    right: 320px;
+    font-size: 44px;
+    color: #ff471a;
+    top: 400px;
+    right: 130px;
     transform: rotate(-6deg);
     font-family: Microsoft JhengHei;
 }
@@ -86,9 +88,9 @@
     animation-delay: 0.75s;
     animation-fill-mode: both;
     position: absolute;
-    font-size: 30px;
-    top: 390px;
-    right: 250px;
+    font-size: 36px;
+    top: 330px;
+    right: 260px;
     transform: rotate(-6deg);
     font-family: Microsoft JhengHei;
 }
@@ -107,9 +109,9 @@
     animation-delay: 0.75s;
     animation-fill-mode: both;
     position: absolute;
-    font-size: 30px;
-    top: 430px;
-    right: 100px;
+    font-size: 28px;
+    top: 385px;
+    right: 155px;
     transform: rotate(-6deg);
     font-family: Microsoft JhengHei;
 }

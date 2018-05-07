@@ -79,6 +79,10 @@ echo $trans_data_SHA256;
 
 $trans_data_insert = mysql_query("INSERT INTO Account.trans_member_test (id, prev_hash, timestamp, account, cost, item, hash) VALUES (NULL, '$prev_hash', '$timestamp', '$account', '$price', '$item', '$trans_data_SHA256');");
 
-header('Location: item.php');
+$_SESSION["thisproduct"] = $item;
+$_SESSION["thisprice"] = $price;
+$_SESSION["thisdate"] = $timestamp;
+
+header('Location: success_change.php');
 
 ?>

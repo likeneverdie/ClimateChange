@@ -6,7 +6,7 @@
     margin-left: -500px;
     height: 580px;
     width: 1000px;
-    background-image: url('VendorFunctionBG.png');
+    background-image: url('RecordBG.png');
     background-size: 1000px 580px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -20,7 +20,7 @@
 	overflow: auto;
 	height: 380px;
     width: 900px;
-	top: 160px;
+	top: 130px;
 	left: 50px;
 }
 

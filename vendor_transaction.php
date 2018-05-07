@@ -49,6 +49,8 @@
 		$seller = $_POST['seller'];
 		$price = $_POST['price'];
 		$kg = $_POST['kg'];
+		$_SESSION["thisamount"] = $kg;
+		$_SESSION["thisprice"] = $price;
 		
 		if($ccoin >= $price){
 			$ccoin = $ccoin - $price;
@@ -76,14 +78,15 @@
 			$date = date("Y/m/d");
 			$time = date("h:i:sa");
 			$timestamp = $date." ".$time;
+			$_SESSION["thisdate"] = $timestamp;
 			$vendor_buy = $account;
 			$vendor_sell = $seller;
 			$trans_data = $id." ".$prev_hash." ".$timestamp." ".$vendor_buy." ".$vendor_sell." ".$kg." ".$price;
 			//echo $trans_data."<br>";
 			$trans_data_SHA256 = hash('sha256', $trans_data); // sha256加密
 			//echo $trans_data_SHA256;
-			
 			$trans_data_insert = mysql_query("INSERT INTO Account.trans_vendor_record (id, prev_hash, timestamp, vendor_buy, vendor_sell, kg, price, hash) VALUES (NULL, '$prev_hash', '$timestamp', '$vendor_buy', '$vendor_sell', '$kg', '$price', '$trans_data_SHA256');");
+			header('Location: success_trans.php');
 		}
 	}
 

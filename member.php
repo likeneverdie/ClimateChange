@@ -56,7 +56,7 @@
             <p id = "steps"><?php echo "累積步數:  ".$_SESSION["steps"]." steps"?></p>
             <p id = "km"><?php echo "累積里程數: ".$_SESSION["km"]." km"?></p>
             <p id = "ccoin"><?php echo "擁有C幣: ".$_SESSION["ccoin"]?></p>
-            <p id = "co2"><?php echo "累積減碳量: ".$co2_saved." kg"?></p>
+            <p id = "co2"><?php echo "累積減碳量: ".number_format($co2_saved, 3)." kg"?></p>
             <img id = "one" src = "1.png" height = "100px" width = "90px">
             <a href="https://likeneverdie.github.io/uidd2017_Loading/">
                 <button id = "btn1" type="submit"> 步行 </button>
@@ -81,7 +81,7 @@
                 <input type="button" id = "change_button" value="商品兌換" onclick="window.location.href='http://140.116.54.153/item.php'" />
             </form>
             <form action="register.php" method="post">
-                <input type="button" id = "rank_button" value="廠商排名" onclick="window.location.href='http://www.hyperlinkcode.com/button-links.php'" />
+                <input type="button" id = "rank_button" value="廠商紀錄" onclick="window.location.href='http://140.116.54.153/TransactionRecord.php'" />
             </form>
             <form action="coin_convert.php" method="post">
 				<input type="submit" name="submit" id = "convert_button" value="兌換C幣" onclick = "btn_confirm()">

@@ -1,0 +1,57 @@
+#container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -290px;
+    margin-left: -500px;
+    height: 580px;
+    width: 1000px;
+    background-image: url('ChangeSuccess.png');
+    background-size: 1000px 580px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#amount{
+	position: absolute;
+	font-size: 34px;
+	font-family: Microsoft JhengHei;
+	top: 285px;
+	left: 280px;
+	color: #d9d9d9;
+}
+
+#price{
+	position: absolute;
+	font-size: 34px;
+	font-family: Microsoft JhengHei;
+	top: 345px;
+	left: 280px;
+	color: #d9d9d9;
+}
+
+#date{
+	position: absolute;
+	font-size: 34px;
+	font-family: Microsoft JhengHei;
+	top: 405px;
+	left: 280px;
+	color: #d9d9d9;
+}
+
+#thisdate{
+	position: absolute;
+	font-size: 26px;
+	font-family: Microsoft JhengHei;
+	top: 422.5px;
+	left: 425px;
+	color: #d9d9d9;
+}
+
+#back{
+	position: absolute;
+	height: 90px;
+	width: 120px;
+	top: 20px;
+	left: 850px
+
+}

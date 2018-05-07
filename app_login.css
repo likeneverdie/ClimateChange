@@ -10,21 +10,42 @@
 	background-size: 1000px 580px;
 }
 
+#CCR{
+	position: absolute;
+	font-family: Microsoft JhengHei;
+	font-size: 52px;
+	top: 70px;
+	left: 90px
+}
+
+#logo{
+	position: absolute;
+	top: 460px;
+	left: 810px;
+	width: 140px;
+	height: 105px;
+
+}
+
 #account_input{
+	border: 3px solid #737373;
+	border-radius: 12.5px;
 	border-radius:7.5px;
 	position: absolute;
 	font-size: 24px;
 	font-family: Microsoft JhengHei;
-	top: 200px;
+	top: 230px;
 	left: 200px;
 }
 
 #password_input{
+	border: 3px solid #737373;
+	border-radius: 12.5px;
 	border-radius:7.5px;
 	position: absolute;
 	font-size: 24px;
 	font-family: Microsoft JhengHei;
-	top: 275px;
+	top: 305px;
 	left: 200px;
 }
 
@@ -32,7 +53,7 @@
 	border: none;
 	background-color: #FCF0C2;
 	position: absolute;
-	font-size: 20px;
+	font-size: 24px;
 	padding: 10px 120px;
 	font-family: Microsoft JhengHei;
 	top: 400px;
@@ -45,9 +66,9 @@
 	background-color: #C7D9F0;
 	position: absolute;
 	font-size: 20px;
-	padding: 10px 100px;
+	padding: 10px 97.5px;
 	font-family: Microsoft JhengHei;
-	font-size: 20px;
+	font-size: 24px;
 	top: 475px;
 	left: 365px;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -58,7 +79,7 @@
 	position: absolute;
 	font-size: 24px;
 	font-family: Microsoft JhengHei;
-	top: 275px;
+	top: 305px;
 	left: 650px;
 }
 
@@ -67,7 +88,7 @@ h1{
 	position: absolute;
 	font-size: 24px;
 	font-family: Microsoft JhengHei;
-	top: 320px;
+	top: 340px;
 	left: 385px;
 }
 
@@ -78,7 +99,7 @@ h1{
 	font-family: Microsoft JhengHei;
 	font-size: 32px;
 	left: 120px;
-	top: 165px;
+	top: 195px;
 }
 
 #password_text{
@@ -87,5 +108,5 @@ h1{
 	font-family: Microsoft JhengHei;
 	font-size: 32px;
 	left:120px;
-	top: 240px;
+	top: 270px;
 }
