@@ -48,10 +48,8 @@
 <body>
     <div id = "container">
 		<b id = "account"><u><?php echo $_SESSION["account"]?></u></b>
-        <b id = "ccoin"><?php echo "擁有C幣: ".$_SESSION["ccoin"]?></b>
-        <form action="coin_convert.php" method="post">
-			<input type="submit" name="submit" id = "convert_button" value="會員優惠券" onclick = "btn_confirm()">
-		</form>
+        <b id = "ccoin"><?php echo "C幣: ".$_SESSION["ccoin"]?></b>
+		<input type="submit" name="submit" id = "convert_button" value="會員優惠券" onclick = "javascript:location.href='http://140.116.54.153/member_record.php'">
         <img id = "city_cafe" src = "city_cafe.png" height = "126.5px" width = "200px">
         <img id = "carrefour" src = "carrefour.png" height = "126.5px" width = "200px">
         <img id = "wastons" src = "wastons.png" height = "126.5px" width = "209px">

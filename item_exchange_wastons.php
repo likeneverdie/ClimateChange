@@ -69,7 +69,7 @@ $date = date("Y/m/d");
 $time = date("h:i:sa");
 $timestamp = $date." ".$time;
 //$user_account = "wtchen";
-$item = "Carrefour BOGOF Coupon";
+$item = "Wastons BOGOF Coupon";
 
 $trans_data = $id." ".$prev_hash." ".$timestamp." ".$account." ".$price." ".$item;
 echo $trans_data."<br>";

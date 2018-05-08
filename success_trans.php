@@ -22,7 +22,7 @@
 		<p id = "price"><?php echo"交易金額&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$_SESSION["thisprice"]?></p>
 		<p id = "date"><?php echo"購買日期"?></p>
 		<p id = "thisdate"><?php echo $_SESSION["thisdate"]?></p>
-		<a href = "http://140.116.54.153/vendor.php"><img id = "back" src = 'back.png'></a>
+		<a href = "http://140.116.54.153/vendor_transaction.php"><img id = "back" src = 'back.png'></a>
     </div>
     <script>
 
